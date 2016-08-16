@@ -1,0 +1,37 @@
+body {
+  background-color: #f4dfdf;
+  color: #9dab2a;
+  font-family: 'Poiret One', cursive;
+  text-align: center;
+}
+
+div.container {
+  padding: 10px;
+  width: 800px;
+  margin: 0 auto;
+  background-color: #ececec;
+  display: block;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+p {
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+  font-style: italic;
+  background-color: #ececec;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  padding: 10px;
+  border: 2px dotted #c2bad0;
+  background-color: #ececec;
+}
