@@ -1,86 +1,67 @@
 'use strict';
 
-var musicQuestionAnswer = prompt('Do I play an instrument?');
-musicQuestionAnswer = musicQuestionAnswer.toLowerCase();
+alert('Welcome to my page! Here you can take a little quiz to see how well you know me. Click "OK" to continue and try it out!');
 
-switch(musicQuestionAnswer) {
-case 'yes':
-  alert('I only wish - I failed to learn how to play any despite taking lessons in violin, guitar, and piano.');
-  console.log('Alerted user they were incorrect');
-  break;
-case 'no':
+var musicQuestionAnswer = prompt ('Do I play an instrument?').toLowerCase();
+
+if (musicQuestionAnswer === 'yes' || musicQuestionAnswer === 'y') {
+  alert('I wish! I failed to learn how to play any despite taking lessons in violin, guitar, and piano.');
+} else if (musicQuestionAnswer === 'no' || musicQuestionAnswer === 'n') {
   alert('Unfortunately, that\'s right.');
-  console.log('Alerted user they were correct');
-  break;
-default:
-  alert('Try again with a simple [yes] or [no] reponse - if you don\'t know, just guess!');
-  console.log('Alerted user only [yes] or [no] response is valid');
+} else {
+  alert('Try again with a simple "yes" or "no" reponse - if you don\'t know, just guess!');
 }
 
-var relationshipQuestionAnswer = prompt('Am I currently in a relationship?');
-relationshipQuestionAnswer = relationshipQuestionAnswer.toLowerCase();
+var pilotQuestionAnswer = prompt ('Have I ever flone an airplane?').toLowerCase();
 
-switch(relationshipQuestionAnswer) {
-case 'yes':
-  alert('You\'re right! I currently have a stellar boyfriend.');
-  console.log('Alerted user they were correct');
-  break;
-case 'no':
-  alert('Wrong, turns out I am currently committed to someone.');
-  console.log('Alerted user they were incorrect');
-  break;
-default:
-  alert('Try again with a simple [yes] or [no] reponse - if you don\'t know, just guess!');
-  console.log('Alerted user only [yes] or [no] response is valid');
+if (pilotQuestionAnswer === 'yes' || pilotQuestionAnswer === 'y') {
+  alert('Yes, I have! It\'s been about ten years though, so I\'m not sure how much I would remember now.');
+} else if (pilotQuestionAnswer === 'no' || pilotQuestionAnswer === 'n') {
+  alert('I flew solo when I was 18, actually! My family is really into aviation.');
+} else {
+  alert('Try again with a simple "yes" or "no" reponse - if you don\'t know, just guess!');
 }
 
-var petQuestionAnswer = prompt('Do I have a pet?');
-petQuestionAnswer = petQuestionAnswer.toLowerCase();
+var petQuestionAnswer = prompt ('Do I have any pets?').toLowerCase();
 
-switch(petQuestionAnswer) {
-case 'yes':
+if (petQuestionAnswer === 'yes' || petQuestionAnswer === 'y') {
   alert('You\'re right! I have a very spoiled Texas Heeler named Remy.');
-  console.log('Alerted user they were correct');
-  break;
-case 'no':
+} else if (petQuestionAnswer === 'no' || petQuestionAnswer === 'n') {
   alert('I\'m actually very much a dog owner - take a look inside my car and you\'d know immediately!');
-  console.log('Alerted user they were incorrect');
-  break;
-default:
-  alert('Try again with a simple [yes] or [no] reponse - if you don\'t know, just guess!');
-  console.log('Alerted user only [yes] or [no] response is valid');
+} else {
+  alert('Try again with a simple "yes" or "no" reponse - if you don\'t know, just guess!');
 }
 
-var childrenQuestionAnswer = prompt('Do I have any children?');
-childrenQuestionAnswer = childrenQuestionAnswer.toLowerCase();
+var childrenQuestionAnswer = prompt ('Do I have any children?').toLowerCase();
 
-switch(childrenQuestionAnswer) {
-case 'yes':
+if (childrenQuestionAnswer === 'yes' || childrenQuestionAnswer === 'y') {
   alert('Unless you count fur-children, no motherhood for me!');
-  console.log('Alerted user they were incorrect');
-  break;
-case 'no':
+} else if (childrenQuestionAnswer === 'no' || childrenQuestionAnswer === 'n') {
   alert('Nailed it!');
-  console.log('Alerted user they were correct');
-  break;
-default:
-  alert('Try again with a simple [yes] or [no] reponse - if you don\'t know, just guess!');
-  console.log('Alerted user only [yes] or [no] response is valid');
+} else {
+  alert('Try again with a simple "yes" or "no" reponse - if you don\'t know, just guess!');
 }
 
-var athleticQuestionAnswer = prompt('Do I enjoy any athletic activities?');
-athleticQuestionAnswer = athleticQuestionAnswer.toLowerCase();
+var athleticQuestionAnswer = prompt ('Do I enjoy any athletic activities?').toLowerCase();
 
-switch(athleticQuestionAnswer) {
-case 'yes':
+if (athleticQuestionAnswer === 'yes' || athleticQuestionAnswer === 'y') {
   alert('Of course I do - skiing, hiking, and paddleboarding are my favorites!');
-  console.log('Alerted user they were correct');
-  break;
-case 'no':
+} else if (athleticQuestionAnswer === 'no' || athleticQuestionAnswer === 'n') {
   alert('How dare you, I\'m not that out of shape!');
-  console.log('Alerted user they were incorrect');
-  break;
-default:
-  alert('Try again with a simple [yes] or [no] reponse - if you don\'t know, just guess!');
-  console.log('Alerted user only [yes] or [no] response is valid');
+} else {
+  alert('Try again with a simple "yes" or "no" reponse - if you don\'t know, just guess!');
 }
+
+// var randomNum = Math.floor(Math.random() * 11);
+// console.log('the number is:', randomNum);
+//
+// for (var i = 0; i < 4; i++) {
+//   var userGuess = prompt('Guess a number from 0-10.');
+//   userGuess = Number(userGuess);
+//   console.log('User guess is:', userGuess, typeof userGuess, typeof randomNum);
+//   if (randomNum === userGuess) {
+//     alert('You got it!');
+//   } else {
+//     alert('Nope, try again!');
+//   }
+// }
