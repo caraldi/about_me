@@ -107,51 +107,48 @@ if (athleticCorrect) {
   console.log('Number correct:', numCorrect);
 }
 
-alert('Okay, ' + userName + ', so far you\'ve gotten ' + numCorrect + ' facts correct, but now I want you to try to read my mind. Click OK to give it a shot!');
-
 var randomNum = Math.floor(Math.random() * 11);
-console.log('The number is:', randomNum);
+console.log('The random number is:', randomNum);
+alert('Okay, ' + userName + ', so far you\'ve gotten ' + numCorrect + ' facts correct, but now I want you to try to read my mind! I\'m thinking of a number between 0-10 and you will have a total of four attempts to get it correct.');
 
-var userGuess = prompt('I\'m thinking of a number between 0-10 and you will have a total of four attempts to get it correct. What do you think it is?');
-userGuess = Number(userGuess);
-console.log('User guess is:', userGuess, typeof userGuess, typeof randomNum);
+var turn = 4;
 
-
-for (var i = 0; i < 4; i++) {
-  console.log(i);
-  if (i = 4) break;
-}
-
-var turns = i;
-console.log('Number of turns:', turns);
-var guessCorrect = (userGuess === randomNum);
-
-while (i <= 4) {
-  if (guessCorrect) {
+while (turn > 0) {
+  var userGuess = prompt('What do you think the number is?');
+  userGuess = Number(userGuess);
+  console.log('User guess is:', userGuess, typeof userGuess, typeof randomNum);
+  if (userGuess === randomNum) {
+    numCorrect++;
     alert('You got it, you must have psychic powers!');
-    turns = 0;
-    console.log(guessCorrect);
+    console.log('Number was guessed:', randomNum);
     break;
   } else if (userGuess > randomNum) {
-    prompt('Your number is too big! You have ' + turns + ' attempts left.');
-    turns = turns - 1;
-    console.log('Turns remaining:', turns);
-    break;
-  } else if (userGuess < randomNum) {
-    prompt('Your number is too small! You have ' + turns + ' attempts left.');
-    turns = turns - 1;
-    console.log('Turns remaining:', turns);
-    break;
+    turn = turn - 1;
+    alert('Your number is too big! You have ' + turn + ' attempts left.');
+    console.log('Turns remaining:', turn);
+  } else {
+    turn = turn - 1;
+    alert('Your number is too small! You have ' + turn + ' attempts left.');
+    console.log('Turns remaining:', turn);
   }
 }
 
-if (guessCorrect) {
-  numCorrect++;
-  console.log('Number correct:', numCorrect);
+alert('Okay, one last question!');
+var states = ['florida', 'alaska'];
+var arrayLength = states.length;
+
+for (var i = 0; i < arrayLength; i++) {
+  console.log(i);
+  var userStateGuess = prompt('I currently live in Oregon, but which other states have I also lived in?').toLowerCase();
+  var arrayCheck = states.indexOf(userStateGuess);
+  if (arrayCheck === -1) {
+    alert('Nope, try again!');
+  } else {
+    alert('You got it! Nicely done.');
+    numCorrect++;
+    break;
+  }
 }
-//
-//   var statesQuestionAnswer = prompt('Okay, one last question: I currently live in Oregon, but which other states have I also lived in?');
-//   var statesCorrect = [Florida, Alaska];
 
 if (numCorrect === 7) {
   alert('All ' + numCorrect + ' correct, nicely done, ' + userName + '! You must know me very well, or maybe you are just an excellent guesser!');
