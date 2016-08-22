@@ -6,3 +6,7 @@ Updates 8/18/2016
     Updated Question 6 and 7 in app.js
     Added ordered list to index.html
     Updated style.css
+
+Updates 8/21/16
+    Edited indentation of index.html
+    
